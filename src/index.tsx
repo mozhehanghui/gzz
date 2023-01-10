@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ConfigProvider } from 'antd'
-import zhCN from 'antd/es/locale/zh_CN'
+
 import App from 'pages/App'
 import appCombineReducers from 'redux/reducer'
 import { HashRouter as Router } from 'react-router-dom'
@@ -13,7 +12,6 @@ import 'react-app-polyfill/ie11'
 import 'react-app-polyfill/stable'
 import 'assets/styles/css/tw.css'
 import 'assets/styles/css/index.css'
-import 'antd/dist/reset.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const IS_DEVELOPMENT = process.env.NODE_ENV === 'development'
@@ -25,11 +23,9 @@ root.render(
     <Provider store={store}>
       <HelmetProvider>
         <React.StrictMode>
-          <ConfigProvider locale={zhCN}>
-            <Router>
-              <App />
-            </Router>
-          </ConfigProvider>
+          <Router>
+            <App />
+          </Router>
         </React.StrictMode>
       </HelmetProvider>
     </Provider>

@@ -8,8 +8,6 @@ import {
   FetchBaseQueryMeta,
 } from '@reduxjs/toolkit/query/react'
 
-import { message } from 'antd'
-
 const baseQuery = fetchBaseQuery({
   baseUrl: '',
 })
@@ -26,7 +24,7 @@ export const fetchWithIntercept: BaseQueryFn<
   // 如果遇到httpStatus!=200-300错误的时候
   if (error) {
     // 根据状态来处理错误
-    message.error('服务器错误')
+    console.error('服务器错误')
     return { error: '服务器错误' }
   }
 
@@ -35,7 +33,7 @@ export const fetchWithIntercept: BaseQueryFn<
     return { data: data?.result, meta }
   }
 
-  message.error(data.message)
+  console.error(data.message)
   return { error: data.message }
 }
 

@@ -1,4 +1,3 @@
-import { message } from 'antd'
 import { AxiosError } from 'axios'
 // export { default as uuidv4 } from 'uuid/dist/umd/uuidv4.min'
 
@@ -8,24 +7,24 @@ export function errorHandle(error: any) {
     const { response } = error as AxiosError
     switch (response?.status) {
       case 401:
-        message.error({ key: '401', content: '401' })
+        console.error({ key: '401', content: '401' })
 
         break
       case 400:
-        message.error(response?.data?.message || response?.statusText)
+        console.error(response?.data?.message || response?.statusText)
         break
       default:
-        message.error(response?.statusText || error.message)
+        console.error(response?.statusText || error.message)
         break
     }
   } else if (error?.message) {
     // Error
-    message.error({
+    console.error({
       content: error.message,
       duration: 2,
     })
   } else {
-    message.error({
+    console.error({
       content: error,
       duration: 2,
     })
