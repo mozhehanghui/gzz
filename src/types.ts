@@ -1,4 +1,4 @@
-import { UserState } from 'pages/Main/slice/types'
+import { UserState } from 'pages/App/slice/types'
 import { CSSProp } from 'styled-components'
 declare module 'react' {
   interface DOMAttributes<T> {

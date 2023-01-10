@@ -1,7 +1,7 @@
 /**
  * Combine all reducers in this file and export the combined reducers.
  */
-import userReduce from 'pages/Main/slice'
+import userReduce from 'pages/App/slice'
 import { combineReducers } from '@reduxjs/toolkit'
 import { InjectedReducersType } from 'utils/types/injector-typings'
 import { baseQueryApi } from 'redux/services/baseQuery'

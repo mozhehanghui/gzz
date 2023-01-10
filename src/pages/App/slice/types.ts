@@ -1,6 +1,5 @@
 import { IPagination } from 'types'
 import { IGetGroupsAndPoolReturn, IGetSomeSystemMetricReturn } from './thunk'
-import { IRouterMeta } from 'routes/config'
 
 export interface ResourceState {
   pools: IResourcePoolListItem[] | []
@@ -81,7 +80,7 @@ export interface UserState {
   PoolAndGroups: IGetGroupsAndPoolReturn
   validDCUToCreatePool: number
   storageMap: Object
-  routeMeta: IRouterMeta
+  routeMeta: any
 }
 
 export interface User {

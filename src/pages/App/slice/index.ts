@@ -12,7 +12,7 @@ import {
   login,
 } from './thunk'
 import { User, UserState } from './types'
-import { IRouterMeta } from 'routes/config'
+
 export const initialState: UserState = {
   username: '',
   loginLoading: false,
@@ -45,7 +45,7 @@ const mainSlice = createSlice({
         ...payload,
       }
     },
-    updateRouteMeta(state, { payload }: PayloadAction<IRouterMeta>) {
+    updateRouteMeta(state, { payload }: PayloadAction<any>) {
       const collapsed = !!sessionStorage.getItem('collapsed')
 
       state.routeMeta = payload

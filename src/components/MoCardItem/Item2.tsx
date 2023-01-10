@@ -4,7 +4,7 @@ import {
   FieldTimeOutlined,
   FormOutlined,
 } from '@ant-design/icons'
-import { Space } from 'antd'
+
 import bg7 from 'assets/images/bg7.png'
 import styled from 'styled-components'
 import {
@@ -22,11 +22,9 @@ export default function Item2() {
           <header>
             <h3 className="title">标注任务名称标注任务名称标注任务名称</h3>
             <div className="tags">
-              <Space>
-                <FormOutlined />
-                <BulbOutlined />
-                <BarsOutlined />
-              </Space>
+              <FormOutlined />
+              <BulbOutlined />
+              <BarsOutlined />
             </div>
           </header>
           <p className="descs">

@@ -1,5 +1,10 @@
 import { baseQueryApi } from 'redux/services/baseQuery'
-import { IJobsParams, IResultTrainingJobs } from '../types'
+interface IJobsParams {}
+interface IResultTrainingJobs {
+  data: Array<{ id: number }>
+  count: any
+  label_columns: any
+}
 export const trainingJobsApi = baseQueryApi.injectEndpoints({
   endpoints: builder => ({
     getTrainingJobs: builder.query<
