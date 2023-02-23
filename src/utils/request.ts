@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
+import { BASE_API_URL } from 'globalConstants'
 import { APIResponse } from 'types'
-const baseURL = ''
+const baseURL = BASE_API_URL
 
 export const instance = axios.create({
   baseURL,

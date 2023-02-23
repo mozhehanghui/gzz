@@ -1,13 +1,7 @@
-import React from 'react'
-import Button from '@mui/material/Button'
+import { useRoutes } from 'react-router-dom'
+import { routerConfig } from 'routes'
 
-export function App() {
-  return (
-    <div>
-      <h1>app</h1>
-      <Button variant="contained">Hello World</Button>
-    </div>
-  )
+export default function App() {
+  const routeList = useRoutes(routerConfig)
+  return routeList
 }
-
-export default App

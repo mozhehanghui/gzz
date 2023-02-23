@@ -11,9 +11,10 @@ import {
   IGetSomeSystemMetricReturn,
   login,
 } from './thunk'
-import { User, UserState } from './types'
+import { AppState, User, UserState } from './types'
 
 export const initialState: UserState = {
+  drawing: false,
   username: '',
   loginLoading: false,
   collapsed: false,
@@ -32,6 +33,9 @@ const mainSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    updateDrawing(state, { payload }: PayloadAction<AppState>) {
+      state.drawing = payload.drawing
+    },
     updateCollapsed(state) {
       state.collapsed = !state.collapsed
       sessionStorage.setItem('collapsed', state.collapsed ? 'true' : '') // 记录用户操作

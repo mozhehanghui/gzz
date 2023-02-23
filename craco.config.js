@@ -74,7 +74,7 @@ module.exports = {
               enforce: true,
             },
             antdDesign: {
-              name: 'taichu-design',
+              name: 'ant-design',
               test: /[\\/]node_modules[\\/](@ant-design|antd)[\\/]/,
               priority: 100,
               enforce: true,

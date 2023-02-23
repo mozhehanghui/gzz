@@ -42,20 +42,3 @@ export const CommonFormTitle = {
   [CommonFormTypes.Update]: '修改',
   [CommonFormTypes.Retrieve]: '查看',
 }
-
-// 体验-Trial，数据工程师-DataEngineer，Common-普通用户，Vip-高级用户，Admin-管理员
-export enum UserRoleTypes {
-  Trial = 'Trial',
-  DataEngineer = 'DataEngineer',
-  Common = 'Common',
-  Vip = 'Vip',
-  Admin = 'Admin',
-}
-
-export const UserRoleMap = {
-  [UserRoleTypes.Trial]: '体验用户',
-  [UserRoleTypes.DataEngineer]: '数据工程师',
-  [UserRoleTypes.Common]: '普通用户',
-  [UserRoleTypes.Vip]: '高级用户',
-  [UserRoleTypes.Admin]: '管理员',
-}

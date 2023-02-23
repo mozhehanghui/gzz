@@ -53,3 +53,8 @@ export const selectUsername = createSelector(
   [selectDomain],
   state => state.username,
 )
+
+export const selectDrawing = createSelector(
+  [selectDomain],
+  state => state.drawing,
+)

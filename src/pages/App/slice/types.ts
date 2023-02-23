@@ -69,6 +69,7 @@ export type IDeleteGroup = IDeletePool & {
   poolName?: string
 }
 export interface UserState {
+  drawing: boolean
   username: string
   loginLoading: boolean
   collapsed: boolean
@@ -83,6 +84,9 @@ export interface UserState {
   routeMeta: any
 }
 
+export interface AppState {
+  drawing: boolean
+}
 export interface User {
   username: string
   storageMap?: Object
